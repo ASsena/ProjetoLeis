@@ -14,11 +14,9 @@ import java.util.UUID;
 public class LeisService {
 
     private LeisRepository leisRepository;
-    private LeisModel leisModel;
 
-    public LeisService(LeisRepository leisRepository, LeisModel leisModel) {
+    public LeisService(LeisRepository leisRepository) {
         this.leisRepository = leisRepository;
-        this.leisModel = leisModel;
     }
 
     public LeisModel salvar(LeiDTO leiDTO){
@@ -76,7 +74,7 @@ public class LeisService {
     public LeisModel encontrarId(Long id){
         var encontrarLei = leisRepository.findById(id);
         if(encontrarLei.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND)
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
         return encontrarLei.get();
     }

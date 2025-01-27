@@ -2,18 +2,13 @@ package com.projeto.projeto.model;
 
 import java.time.LocalDate;
 
-import org.springframework.data.annotation.Id;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "leis")
 public class LeisModel {
 	@Id
-	@GeneratedValue(strategy = GenerationType.UUID)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	String nome;
