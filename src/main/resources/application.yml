@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: projeto
+  datasource:
+    username: leidb
+    password: root
+    url: jdbc://mysql:3306/leisdb
+  jpa:
+    hibernate:
+      ddl-auto: update

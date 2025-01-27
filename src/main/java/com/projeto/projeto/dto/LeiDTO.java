@@ -1,4 +1,7 @@
 package com.projeto.projeto.dto;
 
-public class LeiDTO {
+import java.time.LocalDate;
+
+public record LeiDTO(String nome, String numero, String descricao, LocalDate date) {
+
 }
