@@ -11,7 +11,6 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "leis")
-
 public class LeisModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
@@ -23,7 +22,6 @@ public class LeisModel {
 	LocalDate date;
 	
 	public LeisModel(Long id, String nome, String numero, String descricao, LocalDate date) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.numero = numero;
@@ -63,8 +61,8 @@ public class LeisModel {
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
-	
-	
-	
-	
+
+
+
+
 }
